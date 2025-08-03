@@ -9,7 +9,7 @@
     --c-brand-rgb: 78, 87, 212;
     --c-body: #727272;
     --font-base: "ClashDisplay", sans-serif;
-    --box-shadow: 0px 15px 25px rgba(0,0,0,0.08);
+    --box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.08);
     --transition: all 0.5s ease;
 }
 
@@ -20,8 +20,18 @@ body {
     color: var(--c-body);
 }
 
-h1, h2, h3,h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
     font-weight: 600;
     color: var(--c-dark);
 }
@@ -61,8 +71,8 @@ img {
     position: relative;
 }
 
-.image-zoom-wrapper img{
-     transition: var(--transition);
+.image-zoom-wrapper img {
+    transition: var(--transition);
 }
 
 .image-zoom:hover .image-zoom-wrapper img {
@@ -109,7 +119,7 @@ img {
 
 /* HERO */
 #hero {
-    background: linear-gradient(rgba(var(--c-brand-rgb), 0.507), rgba(var(--c-brand-rgb), 0.438)), url(../images/hero-1.jpg);
+    background: linear-gradient(rgba(var(--c-brand-rgb), 0.507), rgba(var(--c-brand-rgb), 0.438)), url(../images/poza2.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -179,7 +189,7 @@ img {
 }
 
 .service:hover .iconbox {
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255, 255, 255, 0.2);
     color: white;
 }
 
@@ -280,7 +290,7 @@ footer {
 
 .footer-top {
     padding-bottom: 40px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-bottom {
@@ -292,7 +302,7 @@ footer {
 footer li,
 footer p,
 footer a {
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 footer ul {
@@ -314,7 +324,7 @@ footer .line {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 100px;
 }
 
@@ -322,4 +332,3 @@ footer .line {
     background-color: var(--c-brand);
     color: white;
 }
-

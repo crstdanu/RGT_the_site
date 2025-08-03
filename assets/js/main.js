@@ -10,3 +10,37 @@ AOS.init({
   anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 
 });
+
+// Navbar collapse auto-close functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Funcție pentru închiderea meniului navbar
+    function closeNavbar() {
+        const navbar = document.querySelector('.navbar-collapse');
+        if (navbar && navbar.classList.contains('show')) {
+            const bsCollapse = new bootstrap.Collapse(navbar, {
+                toggle: false
+            });
+            bsCollapse.hide();
+        }
+    }
+
+    // Închide meniul când se dă click în afara lui
+    document.addEventListener('click', function(event) {
+        const navbar = document.querySelector('.navbar-collapse');
+        const toggler = document.querySelector('.navbar-toggler');
+        
+        // Verifică dacă meniul este deschis și click-ul nu este pe toggler sau în meniu
+        if (navbar && navbar.classList.contains('show') && 
+            !navbar.contains(event.target) && 
+            !toggler.contains(event.target)) {
+            closeNavbar();
+        }
+    });
+
+    // Închide meniul când se dă click pe link-urile de navigare
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+        link.addEventListener('click', function() {
+            closeNavbar();
+        });
+    });
+});
